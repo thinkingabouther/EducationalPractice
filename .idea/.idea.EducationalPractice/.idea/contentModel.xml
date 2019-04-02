@@ -25,6 +25,7 @@
       </e>
       <e p="Task2" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="CodeGenerationSource.py" t="Include" />
         <e p="Main.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Properties" t="Include">

@@ -43,6 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CodeGenerationSource.py" />
     <Content Include="TaskFiles\Test results.png" />
     <Content Include="TaskFiles\Task definition.png" />
     <Content Include="TestingData\INPUT.TXT" />
