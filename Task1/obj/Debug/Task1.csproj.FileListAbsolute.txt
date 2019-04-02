@@ -1,0 +1,6 @@
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/bin/Debug/Task1.exe
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/bin/Debug/Task1.pdb
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/obj/Debug/Task1.csprojAssemblyReference.cache
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/obj/Debug/Task1.csproj.CoreCompileInputs.cache
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/obj/Debug/Task1.exe
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/obj/Debug/Task1.pdb
