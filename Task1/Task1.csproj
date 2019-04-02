@@ -42,6 +42,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TaskFiles\Test results.png" />
+    <Content Include="TaskFiles\Task definition.png" />
     <Content Include="TestingData\INPUT.TXT" />
     <Content Include="TestingData\OUTPUT.TXT" />
   </ItemGroup>
