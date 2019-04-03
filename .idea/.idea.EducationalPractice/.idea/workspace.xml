@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ed940c7-98fa-4e0b-a804-bab16c4889e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EducationalPractice/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EducationalPractice/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="5ed940c7-98fa-4e0b-a804-bab16c4889e9" name="Default Changelist" comment="Added solved 3 task and utilities library with ConsoleInputParsing methods">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EducationalPractice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EducationalPractice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EducationalPractice.sln" beforeDir="false" afterPath="$PROJECT_DIR$/EducationalPractice.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1/obj/Debug/Task1.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/obj/Debug/Task1.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,14 +41,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="TXT" value="6" />
-          <entry key="cs" value="4640" />
-          <entry key="txt" value="260" />
+          <entry key="cs" value="4777" />
+          <entry key="txt" value="346" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="4640" />
-          <entry key="PLAIN_TEXT" value="266" />
+          <entry key="C#" value="4777" />
+          <entry key="PLAIN_TEXT" value="352" />
         </counts>
       </usages-collector>
     </session>
@@ -89,17 +86,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Task3/Main.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="315">
+              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding>
-                <marker date="1554322775035" expanded="true" signature="6:30" ph="..." />
-                <marker date="1554322775035" expanded="true" signature="47:1075" ph="{...}" />
-                <marker date="1554322775035" expanded="true" signature="87:477" ph="{...}" />
-                <marker date="1554322775035" expanded="true" signature="140:471" ph="{...}" />
-                <marker date="1554322775035" expanded="true" signature="495:1071" ph="{...}" />
-                <marker date="1554322775035" expanded="true" signature="654:759" ph="{...}" />
-                <marker date="1554322775035" expanded="true" signature="785:918" ph="{...}" />
-                <marker date="1554322775035" expanded="true" signature="953:1065" ph="{...}" />
+                <marker date="1554323010574" expanded="true" signature="6:30" ph="..." />
+                <marker date="1554323010574" expanded="true" signature="47:1103" ph="{...}" />
+                <marker date="1554323010574" expanded="true" signature="87:505" ph="{...}" />
+                <marker date="1554323010574" expanded="true" signature="140:499" ph="{...}" />
+                <marker date="1554323010574" expanded="true" signature="523:1099" ph="{...}" />
+                <marker date="1554323010574" expanded="true" signature="682:787" ph="{...}" />
+                <marker date="1554323010574" expanded="true" signature="813:946" ph="{...}" />
+                <marker date="1554323010574" expanded="true" signature="981:1093" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -108,14 +105,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utilities/Main.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            <state relative-caret-position="315">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
-                <marker date="1554322775039" expanded="false" signature="6:31" ph="..." />
-                <marker date="1554322775039" expanded="true" signature="52:563" ph="{...}" />
-                <marker date="1554322775039" expanded="true" signature="89:561" ph="{...}" />
-                <marker date="1554322775039" expanded="true" signature="181:555" ph="{...}" />
-                <marker date="1554322775039" expanded="true" signature="399:488" ph="{...}" />
+                <marker date="1554322857639" expanded="false" signature="6:31" ph="..." />
+                <marker date="1554322857639" expanded="true" signature="52:569" ph="{...}" />
+                <marker date="1554322857639" expanded="true" signature="96:567" ph="{...}" />
+                <marker date="1554322857639" expanded="true" signature="174:561" ph="{...}" />
+                <marker date="1554322857639" expanded="true" signature="405:494" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -184,6 +181,7 @@
         <option value="$PROJECT_DIR$/Task2/Main.cs" />
         <option value="$PROJECT_DIR$/Task3/Program.cs" />
         <option value="$PROJECT_DIR$/Utilities/Class1.cs" />
+        <option value="$PROJECT_DIR$/Utilities/Main.cs" />
         <option value="$PROJECT_DIR$/Task3/Main.cs" />
       </list>
     </option>
@@ -331,7 +329,7 @@
       <option name="presentableId" value="Default" />
       <updated>1554177490864</updated>
       <workItem from="1554177493243" duration="17962000" />
-      <workItem from="1554321174676" duration="1585000" />
+      <workItem from="1554321174676" duration="2025000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with 1 task done">
       <created>1554184460435</created>
@@ -375,11 +373,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554228175691</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added solved 3 task and utilities library with ConsoleInputParsing methods">
+      <created>1554323043161</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1554323043161</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19547000" />
+    <option name="totallyTimeSpent" value="19987000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -392,9 +397,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12210012" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12210012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -409,7 +413,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32959184" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.32959184" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -437,7 +441,8 @@
     <MESSAGE value="Added project for 2 task [2]" />
     <MESSAGE value="Solved task 2 with code generation" />
     <MESSAGE value="Added code generation source file (CodeGenerationSource.py)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code generation source file (CodeGenerationSource.py)" />
+    <MESSAGE value="Added solved 3 task and utilities library with ConsoleInputParsing methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added solved 3 task and utilities library with ConsoleInputParsing methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -531,31 +536,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Utilities/Main.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="315">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
-            <marker date="1554322775039" expanded="false" signature="6:31" ph="..." />
-            <marker date="1554322775039" expanded="true" signature="52:563" ph="{...}" />
-            <marker date="1554322775039" expanded="true" signature="89:561" ph="{...}" />
-            <marker date="1554322775039" expanded="true" signature="181:555" ph="{...}" />
-            <marker date="1554322775039" expanded="true" signature="399:488" ph="{...}" />
+            <marker date="1554322857639" expanded="false" signature="6:31" ph="..." />
+            <marker date="1554322857639" expanded="true" signature="52:569" ph="{...}" />
+            <marker date="1554322857639" expanded="true" signature="96:567" ph="{...}" />
+            <marker date="1554322857639" expanded="true" signature="174:561" ph="{...}" />
+            <marker date="1554322857639" expanded="true" signature="405:494" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Task3/Main.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        <state relative-caret-position="315">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding>
-            <marker date="1554322775035" expanded="true" signature="6:30" ph="..." />
-            <marker date="1554322775035" expanded="true" signature="47:1075" ph="{...}" />
-            <marker date="1554322775035" expanded="true" signature="87:477" ph="{...}" />
-            <marker date="1554322775035" expanded="true" signature="140:471" ph="{...}" />
-            <marker date="1554322775035" expanded="true" signature="495:1071" ph="{...}" />
-            <marker date="1554322775035" expanded="true" signature="654:759" ph="{...}" />
-            <marker date="1554322775035" expanded="true" signature="785:918" ph="{...}" />
-            <marker date="1554322775035" expanded="true" signature="953:1065" ph="{...}" />
+            <marker date="1554323010574" expanded="true" signature="6:30" ph="..." />
+            <marker date="1554323010574" expanded="true" signature="47:1103" ph="{...}" />
+            <marker date="1554323010574" expanded="true" signature="87:505" ph="{...}" />
+            <marker date="1554323010574" expanded="true" signature="140:499" ph="{...}" />
+            <marker date="1554323010574" expanded="true" signature="523:1099" ph="{...}" />
+            <marker date="1554323010574" expanded="true" signature="682:787" ph="{...}" />
+            <marker date="1554323010574" expanded="true" signature="813:946" ph="{...}" />
+            <marker date="1554323010574" expanded="true" signature="981:1093" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -1,0 +1,6 @@
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Utilities/bin/Debug/Utilities.dll
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Utilities/bin/Debug/Utilities.pdb
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Utilities/obj/Debug/Utilities.csprojAssemblyReference.cache
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Utilities/obj/Debug/Utilities.csproj.CoreCompileInputs.cache
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Utilities/obj/Debug/Utilities.dll
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Utilities/obj/Debug/Utilities.pdb
