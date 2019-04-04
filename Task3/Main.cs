@@ -16,28 +16,28 @@ namespace Task3
         }
     }
 
-    class PointU
+    public class PointU
     {
-        private readonly double x;
-        private readonly double y;
-        private bool isInAreaD;
+        private readonly double _x;
+        private readonly double _y;
+        public readonly bool IsInAreaD;
         
         public PointU(double x, double y)
         {
-            this.x = x;
-            this.y = y;
-            isInAreaD = IsInAreaD();
+            _x = x;
+            _y = y;
+            IsInAreaD = CheckIsInAreaD();
         }
 
-        bool IsInAreaD()
+        bool CheckIsInAreaD()
         {
-            return y >= 0 & (x <= 0 & x * x + y * y <= 1 | x >= 0 & x * x + y * y >= 0.09 & x * x + y * y <= 1);
+            return _y >= 0 & (_x <= 0 & _x * _x + _y * _y <= 1 | _x >= 0 & _x * _x + _y * _y >= 0.09 & _x * _x + _y * _y <= 1);
         }
 
         public double GetUValue()
         {
-            if (isInAreaD) return x * x - 1;
-            return Math.Sqrt(Math.Abs(x - 1));
+            if (IsInAreaD) return _x * _x - 1;
+            return Math.Sqrt(Math.Abs(_x - 1));
         }
     }
 
