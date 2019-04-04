@@ -4,24 +4,21 @@ using System.IO;
 
 namespace Task1
 {
-    class MainProgram
+    internal static class MainProgram
     {
         public static void Main(string[] args)
         {
-            string[] data = FileReader(@"/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/TestingData/INPUT.TXT");
+            string[] data = FileSystemManager.FileReader(@"/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/TestingData/INPUT.TXT");
             List<Sphere> sphereList = new List<Sphere>();
             Sphere mainSphere = new Sphere(data[0]);
             sphereList.Add(mainSphere);
-            bool answer = false;
             int answerNumber = 0;
             for (int i = 1; i < data.Length; i++)
             {
                 data[i] = data[i].Replace('.', ',');
                 Sphere currentSphere = new Sphere(data[i]);
-                //Console.WriteLine($"current - {currentSphere}");
                 foreach (Sphere sphere in sphereList)
                 {
-                    //Console.WriteLine($"checking with - {sphere}");
                     if (SphereIntersesction(currentSphere, sphere))
                     {
                         sphere.Intersected = true;
@@ -44,7 +41,7 @@ namespace Task1
                 }
             }
             //Console.WriteLine(numberOfIntersectedSpheres);
-            FileWriter(answerNumber);
+            FileSystemManager.FileWriter(answerNumber, @"/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/TestingData/OUTPUT.TXT");
 
 
         }
@@ -54,12 +51,16 @@ namespace Task1
             double distance = Math.Sqrt((a.X - b.X) * (a.X - b.X) + (a.Y - b.Y) * (a.Y - b.Y) + (a.Z - b.Z) * (a.Z - b.Z));
             return distance < a.Radius + b.Radius;
         }
-        public static string[] FileReader(string FilePath)
+    }
+
+    public static class FileSystemManager
+    {
+        public static string[] FileReader(string filePath)
         {
-            using (StreamReader streamReader = new StreamReader(FilePath))
+            using (StreamReader streamReader = new StreamReader(filePath))
             {
                 string mainSphere = streamReader.ReadLine();
-                int numberOfSpheres = int.Parse(streamReader.ReadLine());
+                int numberOfSpheres = Int32.Parse(streamReader.ReadLine());
 
                 string[] outputArray = new string[numberOfSpheres + 1];
                 outputArray[0] = mainSphere;
@@ -73,18 +74,18 @@ namespace Task1
             }
         }
 
-        public static void FileWriter(int number)
+        public static void FileWriter(int number, string filePath)
         {
-            using (StreamWriter streamWriter = new StreamWriter(@"/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/TestingData/OUTPUT.TXT")) streamWriter.WriteLine(number.ToString());
+            using (StreamWriter streamWriter = new StreamWriter(filePath)) streamWriter.WriteLine(number.ToString());
         }
     }
 
     public class Sphere
     {
-        public double X;
-        public double Y;
-        public double Z;
-        public double Radius;
+        public readonly double X;
+        public readonly double Y;
+        public readonly double Z;
+        public readonly double Radius;
         public bool Intersected = false;
 
         public Sphere(string inputString)
