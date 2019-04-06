@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 
@@ -9,18 +11,18 @@ namespace Task6
         public static void Main(string[] args)
         {
             Sequence sequence = new Sequence(1, -2, -6, 5);
-            for (int i = 0; i < sequence.Length; i++)
+            foreach (SequenceMember sequenceMember in sequence)
             {
-                Console.WriteLine(sequence[i]);
+                Console.WriteLine(sequenceMember);
             }
-
             Console.WriteLine(sequence.IsRisingSequenceEvenElements()
                 ? "Even elements of the sequence form a rising subsequence"
                 : "Event element of the sequence do not form a rising subsequence");
+            
         }
     }
 
-    internal class SequenceMember
+    internal class SequenceMember 
     {
         private readonly int _value;
         public int Index;
@@ -57,17 +59,16 @@ namespace Task6
         }
         
     }
-    internal class Sequence
+    internal class Sequence : IEnumerable
     {
-        private readonly SequenceMember[] _sequenceMembers;
+        private readonly List<SequenceMember> _sequenceMembers = new List<SequenceMember>();
         public readonly int Length;
         public Sequence(int firstMember, int secondMember, int thirdMember, int numberOfMembers)
         {
-            _sequenceMembers = new SequenceMember[numberOfMembers];
             Length = numberOfMembers;
-            _sequenceMembers[0] = new SequenceMember(firstMember, 0);
-            _sequenceMembers[1] = new SequenceMember(secondMember, 1);
-            _sequenceMembers[2] = new SequenceMember(thirdMember, 2);
+            _sequenceMembers.Add(new SequenceMember(firstMember, 0));
+            _sequenceMembers.Add(new SequenceMember(secondMember, 1));
+            _sequenceMembers.Add(new SequenceMember(thirdMember, 2));
             GenerateMember(numberOfMembers - 1);
         }
 
@@ -78,9 +79,10 @@ namespace Task6
                 return _sequenceMembers[numberOfMember];
             }
 
-            _sequenceMembers[numberOfMember] = 13 * GenerateMember(numberOfMember - 1) +
+            SequenceMember currentMember = 13 * GenerateMember(numberOfMember - 1) +
                                                10 * GenerateMember(numberOfMember - 2) +
                                                GenerateMember(numberOfMember - 3);
+            _sequenceMembers.Add(currentMember);
             _sequenceMembers[numberOfMember].Index = numberOfMember;
             return _sequenceMembers[numberOfMember];
         }
@@ -89,7 +91,7 @@ namespace Task6
         {
             get
             {
-                if (index < 0 | index >= _sequenceMembers.Length) throw new WrongSequenceMemberIndex(index);
+                if (index < 0 | index >= Length) throw new WrongSequenceMemberIndex(index);
                 return _sequenceMembers[index];
             }
         }
@@ -102,6 +104,50 @@ namespace Task6
             }
 
             return true;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return new SequenceEnumerator(this);
+        }
+    }
+
+    internal class SequenceEnumerator : IEnumerator
+    {
+        private readonly Sequence _currentSequence;
+        private int _enumeratingPosition = -1;
+        public SequenceEnumerator(Sequence currentSequence)
+        {
+            this._currentSequence = currentSequence;
+        }
+
+        public bool MoveNext()
+        {
+            if (_enumeratingPosition < _currentSequence.Length - 1)
+            {
+                _enumeratingPosition++;
+                return true;
+            }
+
+            return false;
+        }
+
+        public void Reset()
+        {
+            _enumeratingPosition = -1;
+        }
+
+        public object Current
+        {
+            get
+            {
+                if (_enumeratingPosition == -1 | _enumeratingPosition >= _currentSequence.Length)
+                {
+                    throw new WrongSequenceMemberIndex(_enumeratingPosition);
+                }
+                return _currentSequence[_enumeratingPosition];
+            }
+            
         }
     }
 
