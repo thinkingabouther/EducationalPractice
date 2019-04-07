@@ -44,11 +44,16 @@
   <ItemGroup>
     <Compile Include="Task3Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task6Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Task3\Task3.csproj">
       <Project>{f2c8a499-108a-485d-992f-c6286b680234}</Project>
       <Name>Task3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task6\Task6.csproj">
+      <Project>{bdc13016-9ad7-4551-93c5-c30225054b32}</Project>
+      <Name>Task6</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
