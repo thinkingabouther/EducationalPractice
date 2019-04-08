@@ -57,7 +57,30 @@ namespace TestsForTasks
         [Test]
         public void CheckBigNumbersCausingException()
         {
-            Assert.Throws<TooBigNumbersException>(delegate { new Sequence(1, 2, 3, 20); });
+            Assert.Throws<TooBigNumbersException>(
+                delegate
+                {
+                    new Sequence(1, 2, 3, 20); 
+                    
+                });
+        }
+        /// <summary>
+        /// Check the detection of rising subsequence on places with even numbers 
+        /// </summary>
+        [Test]
+        public void CheckRisingEvenSubsequence_True()
+        {
+            Sequence sequence = new Sequence(1, 2, 3, 5);
+            Assert.IsTrue(sequence.IsRisingSequenceEvenElements());
+        }
+        /// <summary>
+        /// Check the detection of not rising subsequence on places with even numbers 
+        /// </summary>
+        [Test]
+        public void CheckRisingEvenSubsequence_False()
+        {
+            Sequence sequence = new Sequence(-1, -2, -3, 6);
+            Assert.IsFalse(sequence.IsRisingSequenceEvenElements());
         }
 
     }

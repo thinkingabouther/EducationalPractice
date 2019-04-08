@@ -131,6 +131,7 @@ namespace Task6
         {
             for (int i = 3; i < Length; i++)
             {
+                Thread thread = new Thread(new ThreadStart(delegate { GenerateMember(i); }), 5);
                 _sequenceMembers.Add(GenerateMember(i));
                 Console.WriteLine($"for member - {i} number of calls is {RecursionDepth}");
                 RecursionDepth = new BigInteger(0);
