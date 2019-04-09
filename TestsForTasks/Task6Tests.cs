@@ -44,7 +44,7 @@ namespace TestsForTasks
         [Test]
         [TestCase(-1)] // index is less than zero
         [TestCase(-10)] // index is bigger than (length of sequence - 1)
-        public void CheckIndexerOutOfRangeOfSequence(int index)
+        public void IndexerOutOfRangeOfSequence(int index)
         {
             Sequence sequence = new Sequence(1, 2, 3, 9);
             Assert.Throws<WrongSequenceMemberIndexException>(
@@ -55,7 +55,7 @@ namespace TestsForTasks
         }
 
         [Test]
-        public void CheckBigNumbersCausingException()
+        public void BigNumbersCausingException()
         {
             Assert.Throws<TooBigNumbersException>(
                 delegate
@@ -68,7 +68,7 @@ namespace TestsForTasks
         /// Check the detection of rising subsequence on places with even numbers 
         /// </summary>
         [Test]
-        public void CheckRisingEvenSubsequence_True()
+        public void RisingEvenSubsequence_True()
         {
             Sequence sequence = new Sequence(1, 2, 3, 5);
             Assert.IsTrue(sequence.IsRisingSequenceEvenElements());
@@ -77,7 +77,7 @@ namespace TestsForTasks
         /// Check the detection of not rising subsequence on places with even numbers 
         /// </summary>
         [Test]
-        public void CheckRisingEvenSubsequence_False()
+        public void RisingEvenSubsequence_False()
         {
             Sequence sequence = new Sequence(-1, -2, -3, 6);
             Assert.IsFalse(sequence.IsRisingSequenceEvenElements());
