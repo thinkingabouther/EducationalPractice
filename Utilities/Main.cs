@@ -40,4 +40,14 @@ namespace Utilities
             return output;
         }
     }
+
+    public static class GetRandomValues
+    {
+        private static Random rnd = new Random();
+
+        public static double GetRandomDouble(double bottomBarrier, double topBarrier)
+        {
+            return rnd.Next((int) bottomBarrier * 10, (int) topBarrier * 10) / 10d;
+        }
+    }
 }

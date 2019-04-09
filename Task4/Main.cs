@@ -52,6 +52,7 @@ namespace Task4
     public class InfiniteSequence : IEnumerable
     {
         private readonly List<ElementOfSequence> _sumMembers;
+        
         private double _eps;
 
         public InfiniteSequence(double eps)
