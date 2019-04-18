@@ -4,3 +4,10 @@
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/obj/Debug/Task1.csproj.CoreCompileInputs.cache
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/obj/Debug/Task1.exe
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Task1/obj/Debug/Task1.pdb
+Z:\RiderProjects\EducationalPractice\Task1\bin\Debug\Task1.exe.config
+Z:\RiderProjects\EducationalPractice\Task1\bin\Debug\Task1.exe
+Z:\RiderProjects\EducationalPractice\Task1\bin\Debug\Task1.pdb
+Z:\RiderProjects\EducationalPractice\Task1\obj\Debug\Task1.csprojAssemblyReference.cache
+Z:\RiderProjects\EducationalPractice\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+Z:\RiderProjects\EducationalPractice\Task1\obj\Debug\Task1.exe
+Z:\RiderProjects\EducationalPractice\Task1\obj\Debug\Task1.pdb

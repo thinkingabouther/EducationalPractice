@@ -1,0 +1,10 @@
+Z:\RiderProjects\EducationalPractice\Task12\obj\Debug\Task12.csprojAssemblyReference.cache
+Z:\RiderProjects\EducationalPractice\Task12\obj\Debug\Task12.MainForm.resources
+Z:\RiderProjects\EducationalPractice\Task12\obj\Debug\Task12.Properties.Resources.resources
+Z:\RiderProjects\EducationalPractice\Task12\obj\Debug\Task12.csproj.GenerateResource.cache
+Z:\RiderProjects\EducationalPractice\Task12\obj\Debug\Task12.csproj.CoreCompileInputs.cache
+Z:\RiderProjects\EducationalPractice\Task12\bin\Debug\Task12.exe.config
+Z:\RiderProjects\EducationalPractice\Task12\bin\Debug\Task12.exe
+Z:\RiderProjects\EducationalPractice\Task12\bin\Debug\Task12.pdb
+Z:\RiderProjects\EducationalPractice\Task12\obj\Debug\Task12.exe
+Z:\RiderProjects\EducationalPractice\Task12\obj\Debug\Task12.pdb
