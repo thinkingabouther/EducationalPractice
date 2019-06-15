@@ -11,7 +11,7 @@ namespace Task12
 {
 
 
-    public class ArrayElement
+    public class ArrayElement : IComparable
     {
         public int Value;
         public int? XPosition = null;
@@ -40,6 +40,12 @@ namespace Task12
         {
             return $"value - {Value}, XPosition - {XPosition}";
         }
+
+        public int CompareTo(object obj)
+        {
+            var temp = (ArrayElement) obj;
+            return this.Value.CompareTo(temp.Value);
+        }
     }
     public class ArrayWithLineValues
     {
@@ -67,15 +73,22 @@ namespace Task12
 
         public int MaximumValue { get; set; } = 250;
 
-        public void SelectionSort(ref int currentHighlightedIndex1, ref int currentHighlightedIndex2,
-            MainForm.RenderDelegate renderDelegate)
+        public void SelectionSort(ref int currentHighlightedIndex1, ref int currentHighlightedIndex2, MainForm.RenderDelegate renderDelegateForChoosing,
+            MainForm.RenderDelegate renderDelegateForSwapping, out int NumOfCompares, out int NumOfSwaps)
+
         {
+            int numOfCompares = 0;
+            int numOfSwaps = 0;
             {
                 for (int i = 0; i < Length - 1; i++)
                 {
                     var minIndex = i;
+                    currentHighlightedIndex1 = i;
                     for (int j = i + 1; j < Length; j++)
                     {
+                        numOfCompares++;
+                        currentHighlightedIndex2 = j;
+                        renderDelegateForChoosing(currentHighlightedIndex1, currentHighlightedIndex2);
                         if (this[j] < this[minIndex])
                         {
                             minIndex = j;
@@ -84,16 +97,71 @@ namespace Task12
 
                     currentHighlightedIndex1 = i;
                     currentHighlightedIndex2 = minIndex;
+                    numOfSwaps++;
                     SwapElements(i, minIndex);
-                    renderDelegate(i, minIndex);
-                    Thread.Sleep(10);
+                    renderDelegateForSwapping(i, minIndex);
                 }
+                currentHighlightedIndex1 = -1;
+                currentHighlightedIndex2 = -2;
+                renderDelegateForSwapping(-1, -1);
+                NumOfCompares = numOfCompares;
+                NumOfSwaps = numOfSwaps;
+            }
+        }
 
+        public void CountingSort(ref int currentHighlightedIndex1, ref int currentHighlightedIndex2,
+            MainForm.RenderDelegate renderDelegate, out int NumOfCompares, out int NumOfSwaps)
+
+        {
+            int numOfCompares = 0;
+            int numOfSwaps = 0;
+            ArrayWithLineValues tempArray = new ArrayWithLineValues(Length);
+            {
+                for (int i = 0; i < Length; i++)
+                {
+                    currentHighlightedIndex1 = i;
+                    int c = 0;
+                    for (int j = 0; j < i; j++)
+                    {
+                        numOfCompares++;
+                        currentHighlightedIndex2 = j;
+                        renderDelegate(currentHighlightedIndex1, currentHighlightedIndex2);
+                        if (this[j] <= this[i])
+                        {
+                            c++;
+                        }
+                    }
+
+                    for (int j = i + 1; j < Length; j++)
+                    {
+                        numOfCompares++;
+                        currentHighlightedIndex2 = j;
+                        renderDelegate(currentHighlightedIndex1, currentHighlightedIndex2);
+                        if (this[j] < this[i])
+                        {
+                            c++;
+                        }
+                    }
+                    tempArray[c] = new ArrayElement(this[i].Value);
+                }
+                tempArray._arrayElements.Sort();
+                currentHighlightedIndex2 = -1;
+                for (int i = 0; i < Length; i++)
+                {
+                    currentHighlightedIndex1 = i;
+                    numOfSwaps++;
+                    this[i] = new ArrayElement(tempArray[i].Value);
+                    renderDelegate(i, i);
+                }
                 currentHighlightedIndex1 = -1;
                 currentHighlightedIndex2 = -2;
                 renderDelegate(-1, -1);
+                NumOfCompares = numOfCompares;
+                NumOfSwaps = numOfSwaps;
             }
         }
+
+
 
         public void SwapElements(int index1, int index2)
         {
@@ -111,7 +179,11 @@ namespace Task12
             this._arrayElements.Insert(index2, temp1);
         }
 
-        public ArrayElement this[int index] => _arrayElements[index];
+        public ArrayElement this[int index]
+        {
+            get => _arrayElements[index];
+            set => _arrayElements[index] = value;
+        } 
 
         public void RandomFill()
         {

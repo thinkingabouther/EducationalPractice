@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ed940c7-98fa-4e0b-a804-bab16c4889e9" name="Default Changelist" comment="- Fixed big with too big accuracy&#10;- Added needed tests">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EducationalPractice/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EducationalPractice/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="5ed940c7-98fa-4e0b-a804-bab16c4889e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EducationalPractice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EducationalPractice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EducationalPractice.sln" beforeDir="false" afterPath="$PROJECT_DIR$/EducationalPractice.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1/Task1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/Task1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1/bin/Debug/Task1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/bin/Debug/Task1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1/bin/Debug/Task1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/bin/Debug/Task1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1/obj/Debug/Task1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/obj/Debug/Task1.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1/obj/Debug/Task1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/obj/Debug/Task1.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1/obj/Debug/Task1.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/obj/Debug/Task1.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1/obj/Debug/Task1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/obj/Debug/Task1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1/obj/Debug/Task1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Task1/obj/Debug/Task1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task2/Task2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Task2/Task2.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task3/Task3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Task3/Task3.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task3/bin/Debug/Task3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Task3/bin/Debug/Task3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task3/bin/Debug/Utilities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Task3/bin/Debug/Utilities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task3/bin/Debug/Utilities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Task3/bin/Debug/Utilities.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task3/obj/Debug/Task3.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Task3/obj/Debug/Task3.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task3/obj/Debug/Task3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task3/obj/Debug/Task3.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task3/obj/Debug/Task3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Task3/obj/Debug/Task3.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task4/Task4.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Task4/Task4.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task5/Task5.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Task5/Task5.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task6/Task6.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Task6/Task6.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestsForTasks/TestsForTasks.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestsForTasks/TestsForTasks.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task3/obj/Debug/Task3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Task3/obj/Debug/Task3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestsForTasks/obj/Debug/TestsForTasks.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestsForTasks/obj/Debug/TestsForTasks.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities/Utilities.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/Utilities.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utilities/bin/Debug/Utilities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/bin/Debug/Utilities.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities/obj/Debug/Utilities.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/obj/Debug/Utilities.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities/obj/Debug/Utilities.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/obj/Debug/Utilities.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utilities/obj/Debug/Utilities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/obj/Debug/Utilities.dll" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Task5/Main.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+            <state relative-caret-position="2445">
+              <caret line="170" column="5" lean-forward="true" selection-start-line="170" selection-start-column="5" selection-end-line="170" selection-end-column="5" />
               <folding>
                 <marker date="1554810826888" expanded="false" signature="6:185" ph="..." />
                 <marker date="1554810826888" expanded="true" signature="202:5470" ph="{...}" />
@@ -81,6 +67,28 @@
                 <marker date="1554810826888" expanded="true" signature="5182:5279" ph="{...}" />
                 <marker date="1554810826888" expanded="true" signature="5340:5458" ph="{...}" />
                 <marker date="1554810826888" expanded="true" signature="5419:5452" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TestsForTasks/Task3Tests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+              <folding>
+                <marker date="1554388677461" expanded="true" signature="6:35" ph="..." />
+                <marker date="1554388677461" expanded="true" signature="60:1895" ph="{...}" />
+                <marker date="1554388677461" expanded="true" signature="108:1893" ph="{...}" />
+                <marker date="1554388677461" expanded="true" signature="123:244" ph="/// Checks the x and y value within out of D area (far away from the D area) ... " />
+                <marker date="1554388677461" expanded="true" signature="484:596" ph="{...}" />
+                <marker date="1554388677461" expanded="true" signature="606:720" ph="/// Checks the x and y value within the 2nd quarter inside the D area ... " />
+                <marker date="1554388677461" expanded="true" signature="909:1018" ph="{...}" />
+                <marker date="1554388677461" expanded="true" signature="1036:1155" ph="/// Checks the x and y within the 1 quarter inside the D area (big circle) ... " />
+                <marker date="1554388677461" expanded="true" signature="1342:1451" ph="{...}" />
+                <marker date="1554388677461" expanded="true" signature="1469:1591" ph="/// Checks the x and y within the 1 quarter outside the D area (small circle) ... " />
+                <marker date="1554388677461" expanded="true" signature="1776:1886" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -143,12 +151,12 @@
         <option value="$PROJECT_DIR$/Task4/Program.cs" />
         <option value="$PROJECT_DIR$/Task6/Main.cs" />
         <option value="$PROJECT_DIR$/TestsForTasks/Task6Tests.cs" />
-        <option value="$PROJECT_DIR$/TestsForTasks/Task3Tests.cs" />
         <option value="$PROJECT_DIR$/TestsForTasks/Task4Tests.cs" />
         <option value="$PROJECT_DIR$/Task5/Program.cs" />
         <option value="$PROJECT_DIR$/Utilities/Main.cs" />
         <option value="$PROJECT_DIR$/Task4/Main.cs" />
         <option value="$PROJECT_DIR$/Task5/Main.cs" />
+        <option value="$PROJECT_DIR$/TestsForTasks/Task3Tests.cs" />
       </list>
     </option>
   </component>
@@ -163,12 +171,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
             <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="EducationalPractice" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
@@ -176,7 +184,7 @@
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -346,6 +354,8 @@
       <workItem from="1554992795666" duration="753000" />
       <workItem from="1554997490043" duration="168000" />
       <workItem from="1555400559970" duration="217000" />
+      <workItem from="1555588911280" duration="1960000" />
+      <workItem from="1556876020191" duration="567000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with 1 task done">
       <created>1554184460435</created>
@@ -480,11 +490,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554791564297</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- Updated .NET Framework version for compatibility with VS 2017&#10;- Added task12 (sorting visualization) with forms (in dev)">
+      <created>1555589013604</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1555589013604</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78131000" />
+    <option name="totallyTimeSpent" value="80658000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,7 +516,7 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49467275" visible="true" weight="0.16666667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49467275" visible="true" weight="0.17032968" />
       <window_info id="Structure" order="1" sideWeight="0.5053272" side_tool="true" weight="0.15384616" />
       <window_info id="Favorites" order="2" sideWeight="0.5053272" side_tool="true" weight="0.16117217" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -513,9 +530,9 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unit Tests" order="11" weight="0.32959184" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" sideWeight="0.4993895" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32959184" />
-      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50061053" side_tool="true" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.32959184" />
       <window_info anchor="bottom" id="Performance Profiler" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -524,7 +541,7 @@
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Tutorials" order="5" />
-      <window_info anchor="right" id="Unit Tests Coverage" order="6" weight="0.32967034" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="6" visible="true" weight="0.32967034" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49467275" visible="true" weight="0.16117217" />
@@ -562,7 +579,7 @@
     <option name="coveragePercentColumnWidth" value="150" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="254" />
+    <option name="symbolColumnWidth" value="284" />
     <coverage-tree-state>
       <expand>
         <path>
@@ -598,7 +615,8 @@
     <MESSAGE value="Task 4 solved" />
     <MESSAGE value="Added task files for task 4" />
     <MESSAGE value="- Fixed big with too big accuracy&#10;- Added needed tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed big with too big accuracy&#10;- Added needed tests" />
+    <MESSAGE value="- Updated .NET Framework version for compatibility with VS 2017&#10;- Added task12 (sorting visualization) with forms (in dev)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Updated .NET Framework version for compatibility with VS 2017&#10;- Added task12 (sorting visualization) with forms (in dev)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -906,26 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestsForTasks/Task3Tests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-          <folding>
-            <marker date="1554388677461" expanded="false" signature="6:35" ph="..." />
-            <marker date="1554388677461" expanded="true" signature="60:1895" ph="{...}" />
-            <marker date="1554388677461" expanded="true" signature="108:1893" ph="{...}" />
-            <marker date="1554388677461" expanded="true" signature="123:244" ph="/// Checks the x and y value within out of D area (far away from the D area) ... " />
-            <marker date="1554388677461" expanded="true" signature="484:596" ph="{...}" />
-            <marker date="1554388677461" expanded="true" signature="606:720" ph="/// Checks the x and y value within the 2nd quarter inside the D area ... " />
-            <marker date="1554388677461" expanded="true" signature="909:1018" ph="{...}" />
-            <marker date="1554388677461" expanded="true" signature="1036:1155" ph="/// Checks the x and y within the 1 quarter inside the D area (big circle) ... " />
-            <marker date="1554388677461" expanded="true" signature="1342:1451" ph="{...}" />
-            <marker date="1554388677461" expanded="true" signature="1469:1591" ph="/// Checks the x and y within the 1 quarter outside the D area (small circle) ... " />
-            <marker date="1554388677461" expanded="true" signature="1776:1886" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Utilities/Main.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1046,8 +1044,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Task5/Main.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        <state relative-caret-position="2445">
+          <caret line="170" column="5" lean-forward="true" selection-start-line="170" selection-start-column="5" selection-end-line="170" selection-end-column="5" />
           <folding>
             <marker date="1554810826888" expanded="false" signature="6:185" ph="..." />
             <marker date="1554810826888" expanded="true" signature="202:5470" ph="{...}" />
@@ -1094,6 +1092,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Task5/TaskFiles/Matrix.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestsForTasks/Task3Tests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <marker date="1554388677461" expanded="true" signature="6:35" ph="..." />
+            <marker date="1554388677461" expanded="true" signature="60:1895" ph="{...}" />
+            <marker date="1554388677461" expanded="true" signature="108:1893" ph="{...}" />
+            <marker date="1554388677461" expanded="true" signature="123:244" ph="/// Checks the x and y value within out of D area (far away from the D area) ... " />
+            <marker date="1554388677461" expanded="true" signature="484:596" ph="{...}" />
+            <marker date="1554388677461" expanded="true" signature="606:720" ph="/// Checks the x and y value within the 2nd quarter inside the D area ... " />
+            <marker date="1554388677461" expanded="true" signature="909:1018" ph="{...}" />
+            <marker date="1554388677461" expanded="true" signature="1036:1155" ph="/// Checks the x and y within the 1 quarter inside the D area (big circle) ... " />
+            <marker date="1554388677461" expanded="true" signature="1342:1451" ph="{...}" />
+            <marker date="1554388677461" expanded="true" signature="1469:1591" ph="/// Checks the x and y within the 1 quarter outside the D area (small circle) ... " />
+            <marker date="1554388677461" expanded="true" signature="1776:1886" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

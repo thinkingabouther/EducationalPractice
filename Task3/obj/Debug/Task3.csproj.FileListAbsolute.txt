@@ -7,3 +7,4 @@
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Task3/obj/Debug/Task3.csproj.CopyComplete
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Task3/obj/Debug/Task3.exe
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Task3/obj/Debug/Task3.pdb
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task3/bin/Debug/Task3.exe.config
