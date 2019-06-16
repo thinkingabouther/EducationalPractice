@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Security;
+using System.Text;
 using Microsoft.SqlServer.Server;
 
 namespace Task8
@@ -17,9 +18,9 @@ namespace Task8
             Nodes.Add(node);
         }
 
-        public void AddBranch(Branch branch)
+        public void AddBranch(Node node1, Node node2)
         {
-            Branches.Add(branch);
+            Branches.Add(new Branch(node1, node2));
         }
 
         public void ProcessIncedentNodes()
@@ -32,6 +33,18 @@ namespace Task8
                     if (branch.Node2 == node && !node.IncedentNodes.Contains(branch.Node1)) node.AddIncedentNode(branch.Node1);
                 }
             }
+        }
+
+        public static string GetCorreleation(Graph a, Graph b, int num)
+        {
+            string output = "";
+            var numString = num.ToString();
+            for (int i = 0; i < numString.Length; i++)
+            {
+                output += $"{a.Nodes[i].Name} - {b.Nodes[int.Parse(numString[i].ToString())-1].Name}\n";
+            }
+
+            return output;
         }
 
         public string GetAllNodes()

@@ -19,9 +19,9 @@ namespace Task8
             graph1.AddNode(c);
             graph1.AddNode(a1);
             
-            graph1.AddBranch(new Branch(c, b));
-            graph1.AddBranch(new Branch(a, c));
-            graph1.AddBranch(new Branch(c, a1));
+            graph1.AddBranch(c, b);
+            graph1.AddBranch(a, c);
+            graph1.AddBranch(c, a1);
             
             graph1.ProcessIncedentNodes(); 
             
@@ -37,21 +37,14 @@ namespace Task8
             graph2.AddNode(f);
             graph2.AddNode(d1);
             
-            graph2.AddBranch(new Branch(d, f));
-            graph2.AddBranch(new Branch(d, e));
-            graph2.AddBranch(new Branch(d1, d));
+            graph2.AddBranch(d, f);
+            graph2.AddBranch(d, e);
+            graph2.AddBranch(d1, d);
             
-            graph2.ProcessIncedentNodes(); 
+            graph2.ProcessIncedentNodes();
 
-            Console.WriteLine(Graph.Isomeric(graph1, graph2));
-            foreach (Node graph2Node in graph2.Nodes)
-            {
-                Console.WriteLine(graph2Node);
-            }
-            foreach (Node graph1Node in graph1.Nodes)
-            {
-                Console.WriteLine(graph1Node);
-            }
+            Console.WriteLine(Graph.GetCorreleation(graph1, graph2, Graph.Isomeric(graph1, graph2)));
+
         }
     }
 } 
