@@ -20,7 +20,13 @@ namespace Task8
 
         public void AddBranch(Node node1, Node node2)
         {
-            Branches.Add(new Branch(node1, node2));
+            var branch = new Branch(node1, node2);
+            if (!Branches.Contains(branch))
+            {
+                Branches.Add(new Branch(node1, node2));
+            }
+            else throw new Exception();
+            ProcessIncedentNodes();
         }
 
         public void ProcessIncedentNodes()
@@ -129,10 +135,10 @@ namespace Task8
         }
     }
 
-    public class Node
+    public class Node : ICloneable
     {
         public string Name { get; }
-        public string Value { get; }
+        public string Value { get; set; }
         public List<Node> IncedentNodes = new List<Node>();
         public int NodeNum;
         
@@ -169,7 +175,19 @@ namespace Task8
         public override string ToString()
         {
             return $"Node {Name}, incedent nodes - {GetAllIncedentNodesNames()}";}
+
+        public object Clone()
+        {
+            var tempNode = new Node($"clone of {Name}");
+            tempNode.Value = Value;
+            foreach (Node node in IncedentNodes)
+            {
+                tempNode.IncedentNodes.Add(node);
+            }
+
+            return tempNode;
         }
+    }
     
 
     public class Branch
@@ -186,6 +204,13 @@ namespace Task8
         public override string ToString()
         {
             return $"Branch between {Node1} and {Node2}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            var branch = (Branch) obj;
+            return (this.Node1 == branch.Node1 && this.Node2 == branch.Node2 ||
+                    this.Node2 == branch.Node1 && this.Node1 == branch.Node2);
         }
     }
 

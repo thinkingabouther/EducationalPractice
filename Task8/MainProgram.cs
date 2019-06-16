@@ -45,6 +45,20 @@ namespace Task8
 
             Console.WriteLine(Graph.GetCorreleation(graph1, graph2, Graph.Isomeric(graph1, graph2)));
 
+            var graph3 = GraphGenerator.GenerateGraph();
+            foreach (var node in graph3.Nodes)
+            {
+                Console.WriteLine(node);
+            }
+
+            var graph4 = GraphGenerator.GenerateIsoGraph(graph3);
+            foreach (Node node in graph4.Nodes)
+            {
+                Console.WriteLine(node);
+            }
+            
+            Console.WriteLine(Graph.GetCorreleation(graph3, graph4, Graph.Isomeric(graph3, graph4)));
+
         }
     }
 } 
