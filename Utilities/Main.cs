@@ -23,7 +23,7 @@ namespace Utilities
             return output;
         }
 
-        public static int Int(string invite, string errorMessage)
+        public static int Int(string invite, string errorMessage = "Input error!")
         {
             bool flag;
             int output;
