@@ -26,6 +26,7 @@ namespace Task11
             }
             
             FileSystemManager.WriteMessage("/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task11/TestingData/decodedMessage.txt", processor.DecodeMessage(encodedMessageFromFile)); // decoding message and writing it in file
+            processor.ShowMatrix(processor.GenerateKeyMatrix(10));
         }
     }
 }

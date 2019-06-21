@@ -95,39 +95,37 @@ namespace Task11
         {
             Random rnd = new Random();
             int[,] newMatrix = new int[size, size];
-            List<Tuple<int, int>> possiblePositions = new List<Tuple<int, int>>();
-            List<Tuple<int, int>> actualPositions = new List<Tuple<int, int>>();
+            List<Position> possiblePositions = new List<Position>();
+            List<Position> actualPositions = new List<Position>();
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
                 {
-                    possiblePositions.Add(new Tuple<int, int>(i, j));
+                    possiblePositions.Add(new Position(i, j));
                 }
             }
 
-            for (int i = 0; i < size * size / 4; i++)
+            for (int k = 0; k < size*size / 4; k++)
             {
-                int curPosition = rnd.Next(possiblePositions.Count - 1);
-                actualPositions.Add(possiblePositions[curPosition]);
-                int itoDelete = possiblePositions[curPosition].Item1;
-                int jToDelete = possiblePositions[curPosition].Item2;
-                for (int j = 0; j < possiblePositions.Count; j++)
+                Position currPosition = possiblePositions[rnd.Next(possiblePositions.Count)];
+                actualPositions.Add(currPosition);
+                //Console.WriteLine($"Chosen position - {currPosition}");
+                for (int i = 0; i < possiblePositions.Count; i++)
                 {
-                    int curI = possiblePositions[j].Item1;
-                    int curJ = possiblePositions[j].Item2;
-                    if (curI == itoDelete & curJ == jToDelete 
-                        || curI == itoDelete & curJ == size - jToDelete - 1 
-                        || curI == size - itoDelete - 1 & curJ == jToDelete 
-                        || curI == size - itoDelete - 1 & curJ == size - jToDelete - 1)
+                    if (currPosition.IsSymmetric(possiblePositions[i], size))
                     {
-                        possiblePositions.RemoveAt(j);
+                        //Console.WriteLine($"To remove {possiblePositions[i]}");
+                        possiblePositions.Remove(possiblePositions[i]);
+                        i = i - 1;
                     }
+
                 }
+                //Console.WriteLine($"{possiblePositions.Count}, {actualPositions.Count}");
             }
 
-            foreach (Tuple<int,int> actualPosition in actualPositions)
+            foreach (Position actualPosition in actualPositions)
             {
-                newMatrix[actualPosition.Item1, actualPosition.Item2] = 1;
+                newMatrix[actualPosition.I, actualPosition.J] = 1;
             }
 
             return newMatrix;
@@ -163,7 +161,30 @@ namespace Task11
             }
         }
 
+        private class Position
+        {
+            public int I;
+            public int J;
 
+            public override string ToString()
+            {
+                return $"i-{I}, j-{J}";
+            }
+
+            public Position(int i, int j)
+            {
+                I = i;
+                J = j;
+            }
+
+            public bool IsSymmetric(Position candidate, int size)
+            {
+                return candidate.I == I & candidate.J == J ||
+                       candidate.I == size - I - 1 & candidate.J == J ||
+                       candidate.I == size - I - 1 & candidate.J == size - J - 1 ||
+                       candidate.I == I & candidate.J == size - J - 1;
+            }
+        }
     }
     
     
