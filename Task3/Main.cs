@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using Utilities;
 
 namespace Task3
 {
+    [ExcludeFromCodeCoverage]
     internal static class MainProgram
     {
         public static void Main(string[] args)

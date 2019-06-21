@@ -7,7 +7,7 @@ namespace TestsForTasks
     public class Task3Tests
     {
         /// <summary>
-        /// Checks the x and y value within out of D area (far away from the D area)
+        /// Checks the x and y value out of D area (far away from the D area)
         /// </summary>
         [TestCase(1, 1)] // 1st quarter
         [TestCase(-1, 1)] // 2nd quarter
