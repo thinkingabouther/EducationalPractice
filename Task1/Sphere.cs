@@ -1,3 +1,5 @@
+using System;
+
 namespace Task1
 {
     public class Sphere
@@ -11,15 +13,21 @@ namespace Task1
         public Sphere(string inputString)
         {
             string[] data = inputString.Split(' ');
-            X = double.Parse(data[0]);
-            Y = double.Parse(data[1]);
-            Z = double.Parse(data[2]);
-            Radius = double.Parse(data[3]);
+            X = Double.Parse(data[0]);
+            Y = Double.Parse(data[1]);
+            Z = Double.Parse(data[2]);
+            Radius = Double.Parse(data[3]);
         }
 
         public override string ToString()
         {
             return $"X={X}, Y={Y}, Z={Z}, R={Radius}";
+        }
+
+        public static bool SphereIntersection(Sphere a, Sphere b)
+        {
+            double distance = Math.Sqrt((a.X - b.X) * (a.X - b.X) + (a.Y - b.Y) * (a.Y - b.Y) + (a.Z - b.Z) * (a.Z - b.Z));
+            return distance < a.Radius + b.Radius;
         }
     }
 }
