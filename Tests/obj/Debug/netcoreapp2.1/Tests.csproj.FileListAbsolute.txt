@@ -18,3 +18,6 @@
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/obj/Debug/netcoreapp2.1/Tests.csproj.CopyComplete
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/obj/Debug/netcoreapp2.1/Tests.dll
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/obj/Debug/netcoreapp2.1/Tests.pdb
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/bin/Debug/netcoreapp2.1/Task4.exe
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/bin/Debug/netcoreapp2.1/Task4.pdb
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/bin/Debug/netcoreapp2.1/Task4.exe.config

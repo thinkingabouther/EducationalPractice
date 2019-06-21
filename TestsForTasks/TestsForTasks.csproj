@@ -43,9 +43,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Task3Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task4Tests.cs" />
     <Compile Include="Task6Tests.cs" />
   </ItemGroup>
   <ItemGroup>

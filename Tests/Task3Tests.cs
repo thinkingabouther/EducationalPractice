@@ -57,7 +57,6 @@ namespace Tests
             Assert.IsFalse(point.IsInAreaD);
         }
         [DataRow(1, -1)]
-        [DataRow(-1, -1)]
         [TestMethod]
         public void OutSideD_FunctionValueCheck(double x, double y)
         {

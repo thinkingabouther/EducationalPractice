@@ -1,15 +1,16 @@
 using System;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Task4;
 
-namespace TestsForTasks
+namespace Tests
 {
+    [TestClass]
     public class Task4Tests
     {
         /// <summary>
         /// Checks proper sum calculations when accuracy is configured properly  
         /// </summary>
-        [Test]
+        [TestMethod]
         public void SumWithProperEpsilonInput()
         {
             double eps = 0.01;
@@ -27,7 +28,7 @@ namespace TestsForTasks
         /// <summary>
         /// Checks ToString override of the elements of the sequence
         /// </summary>
-        [Test]
+        [TestMethod]
         public void ElementOfSequenceWithConcreteNumber()
         {
             double eps = 0.01;
@@ -43,15 +44,15 @@ namespace TestsForTasks
             Assert.IsTrue(expectedValue == acutalValue);
         }
 
-        [Test]
+        [TestMethod]
         public void ExceptionThrownWhenAccuracyIsTooBig()
         {
             double eps = 0.000000000000000000000001;
-            Assert.Throws<TooBigAccuracyException>(delegate
+            Assert.ThrowsException<TooBigAccuracyException>(delegate
             {
                 InfiniteSequence sequence = new InfiniteSequence(eps);
+                sequence.ToString();
             });
         }
     }
 }
-
