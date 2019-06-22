@@ -14,7 +14,7 @@ namespace Task8
         public List<Branch> Branches = new List<Branch>();
         private static List<string> DefaultNames = new List<string>()
         {
-            "a", "b", "c", "d", "e", "f", "g", "h", "i", "k"
+            "a", "b", "c", "d", "e", "f", "g", "h", "i", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y"
         };
 
         public void AddNode(Node node)
@@ -23,11 +23,11 @@ namespace Task8
         }
 
 
-        public static void FillWithNodes(Graph graph, int number)
+        public static void FillWithNodes(Graph graph, int number, int offset = 0)
         {
             for (int i = 0; i < number; i++)
             {
-                graph.AddNode(new Node(DefaultNames[i]));
+                graph.AddNode(new Node(DefaultNames[i+offset]));
             }
         }
 
@@ -43,7 +43,7 @@ namespace Task8
             {
                 Branches.Add(new Branch(node1, node2));
             }
-            else throw new Exception();
+            else throw new BranchAlreadyAddedException();
             ProcessIncedentNodes();
         }
 
@@ -280,5 +280,10 @@ namespace Task8
     public class NotIsomericException : Exception
     {
             
+    }
+
+    public class BranchAlreadyAddedException : Exception
+    {
+        
     }
 }

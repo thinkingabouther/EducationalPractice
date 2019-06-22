@@ -34,7 +34,7 @@ namespace Task8
             } while (!flag);
             
             Graph.FillWithNodes(graph1, numberOfNodes);
-            Graph.FillWithNodes(graph2, numberOfNodes);
+            Graph.FillWithNodes(graph2, numberOfNodes, numberOfNodes);
             List<Graph> graphs = new List<Graph>();
             graphs.Add(graph1);
             graphs.Add(graph2);
@@ -79,6 +79,19 @@ namespace Task8
             {
                 graph.ProcessIncedentNodes();
             }
+            Console.WriteLine("1 graph nodes names:");
+            foreach (Node node in graph1.Nodes)
+            {
+                Console.Write(node.Name + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("2 graph nodes names:");
+            foreach (Node node in graph1.Nodes)
+            {
+                Console.Write(node.Name + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("The correlation is:");
             Console.WriteLine(Graph.GetCorreleation(graph1, graph2, Graph.Isomeric(graph1, graph2)));
 
 //            Graph graph1 = new Graph();
