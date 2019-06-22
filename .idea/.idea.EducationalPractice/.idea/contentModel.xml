@@ -195,6 +195,7 @@
         </e>
         <e p="Task3Tests.cs" t="Include" />
         <e p="Task4Tests.cs" t="Include" />
+        <e p="Task5Tests.cs" t="Include" />
         <e p="Tests.csproj" t="IncludeRecursive" />
       </e>
       <e p="TestsForTasks" t="IncludeRecursive">

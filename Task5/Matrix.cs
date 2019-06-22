@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Utilities;
 
@@ -20,7 +21,7 @@ namespace Task5
             J = j;
             Value = value;
         }
-
+        [ExcludeFromCodeCoverage]
         public override string ToString()
         {
             return $"Matrix element with indexes {_i}, {_j} is {Value}";
@@ -55,7 +56,7 @@ namespace Task5
         
         private readonly bool _random;
 
-        private int MatrixSize
+        public int MatrixSize
         {
             get => _matrixSize;
             set
@@ -67,20 +68,8 @@ namespace Task5
 
         public MatrixElement this[int indexI, int indexJ]
         {
-            set
-            {
-                if (indexJ >= MatrixSize) throw new WrongMatrixIndex(indexJ);
-                if (indexI >= MatrixSize) throw new WrongMatrixIndex(indexI);
-                if (indexI != value.I || indexJ != value.J) throw new WrongMatrixMemberInstance("Current MatrixMember instance has different indexes compared to the indexer values");
-                _matrixElements.Add(value);
-            }
-            get
-            {
-                if (indexI >= MatrixSize) throw new WrongMatrixIndex(indexI);
-                if (indexJ >= MatrixSize) throw new WrongMatrixIndex(indexJ);
-                
-                return (from element in this where element.I == indexI && element.J == indexJ select element).First();
-            } 
+            set => _matrixElements.Add(value);
+            get => (from element in this where element.I == indexI && element.J == indexJ select element).First();
         }
 
         public Matrix(int matrixSize, bool random = true)
@@ -90,7 +79,7 @@ namespace Task5
             _random = random;
             MatrixFill();
         }
-
+        [ExcludeFromCodeCoverage]
         private void MatrixFill()
         {
             for (int i = 0; i < MatrixSize; i++)
@@ -111,7 +100,7 @@ namespace Task5
         {
             return _matrixElements.GetEnumerator();
         }
-
+        [ExcludeFromCodeCoverage]
         public void ShowMatrix()
         {
             for (int i = 0; i < MatrixSize; i++)
@@ -140,12 +129,23 @@ namespace Task5
             return sum;
         }
 
+        public double GetMaximumOfElements()
+        {
+            var elementsForMaximum = from element in this
+                where (element.I >= element.J & MatrixSize - 1  - element.I >= element.J) | (element.J >= element.I & MatrixSize - 1 - element.I <= element.J)
+
+                select element.Value;
+           
+
+            return elementsForMaximum.Max(); 
+        }
+
         public IEnumerator GetEnumerator()
         {
             return _matrixElements.GetEnumerator();
         }
     }
-    
+    [ExcludeFromCodeCoverage]
     public class WrongMatrixMemberInstance : Exception
     {
         public WrongMatrixMemberInstance(string message) : base(message)
@@ -153,7 +153,7 @@ namespace Task5
             
         }
     }
-
+    [ExcludeFromCodeCoverage]
     public class WrongMatrixSize : Exception
     {
         public WrongMatrixSize(int x) : base(ModifyExceptionMessage(x))
