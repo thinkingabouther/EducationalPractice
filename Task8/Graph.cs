@@ -12,12 +12,30 @@ namespace Task8
     {
         public List<Node> Nodes = new List<Node>();
         public List<Branch> Branches = new List<Branch>();
+        private static List<string> DefaultNames = new List<string>()
+        {
+            "a", "b", "c", "d", "e", "f", "g", "h", "i", "k"
+        };
 
         public void AddNode(Node node)
         {
             Nodes.Add(node);
         }
 
+
+        public static void FillWithNodes(Graph graph, int number)
+        {
+            for (int i = 0; i < number; i++)
+            {
+                graph.AddNode(new Node(DefaultNames[i]));
+            }
+        }
+
+        public void AddBranch(int i1, int i2)
+        {
+            AddBranch(Nodes[i1], Nodes[i2]);
+        }
+        
         public void AddBranch(Node node1, Node node2)
         {
             var branch = new Branch(node1, node2);
@@ -47,7 +65,7 @@ namespace Task8
             var numString = num.ToString();
             for (int i = 0; i < numString.Length; i++)
             {
-                output += $"{a.Nodes[i].Name} - {b.Nodes[int.Parse(numString[i].ToString())-1].Name}\n";
+                output += $"{a.Nodes[i].Name} - {b.Nodes[int.Parse(numString[i].ToString()) - 1].Name}\n";
             }
 
             return output;
@@ -95,7 +113,7 @@ namespace Task8
                 if (TryIsomeric(a, b)) return numGeneratorNum;
             }
 
-            return 0;
+            throw new NotIsomericException();
         }
 
         private static bool TryIsomeric(Graph a, Graph b)
@@ -257,8 +275,10 @@ namespace Task8
 
             return false;
         }
-        
-        
-        
+    }
+
+    public class NotIsomericException : Exception
+    {
+            
     }
 }
