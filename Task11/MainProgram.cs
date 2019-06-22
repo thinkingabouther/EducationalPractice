@@ -7,10 +7,7 @@ namespace Task11
         public static void Main(string[] args)
         {
             var processor = new MatrixProcessor();
-            var keyMatrix = processor.GenerateKeyMatrix(10);
-            processor.ShowMatrix(keyMatrix); 
-            processor.KeyMatrix = keyMatrix;
-            //processor.UploadMatrix("/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task11/TestingData/keyMatrix.txt"); // initializing key matrix
+            processor.UploadMatrix("/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task11/TestingData/keyMatrix.txt"); // initializing key matrix
             Console.WriteLine("\n\n");
             var encodedMatrix = processor.EncodeMessage(FileSystemManager.ReadMessage(
                 "/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task11/TestingData/messageToEncode.txt"));

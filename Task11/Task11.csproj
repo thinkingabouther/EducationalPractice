@@ -47,6 +47,7 @@
     <Content Include="TestingData\encodedMessage.txt" />
     <Content Include="TestingData\keyMatrix.txt" />
     <Content Include="TestingData\messageToEncode.txt" />
+    <Content Include="TestingData\newKeyMatrix.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
