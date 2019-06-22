@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Task6
 {
@@ -38,7 +39,7 @@ namespace Task6
             return $"Index {index} is out of sequence. Try creating a new one";
         }
     }
-
+    [ExcludeFromCodeCoverage]
     internal class SequenceEnumerator : IEnumerator
     {
         private readonly Sequence _currentSequence;
@@ -58,7 +59,6 @@ namespace Task6
 
             return false;
         }
-
         public void Reset()
         {
             _enumeratingPosition = -1;
@@ -93,7 +93,7 @@ namespace Task6
         {
             return $"The {Index+1} element of the sequence is {_value}";
         }
-
+        [ExcludeFromCodeCoverage]
         public static SequenceMember operator +(SequenceMember a, SequenceMember b)
         {
 
@@ -124,7 +124,7 @@ namespace Task6
         {
             return a._value >= b._value;
         }
-        
+        [ExcludeFromCodeCoverage]
         public static bool operator <=(SequenceMember a, SequenceMember b)
         {
             return a._value <= b._value;

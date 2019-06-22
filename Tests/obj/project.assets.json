@@ -1654,6 +1654,18 @@
           "bin/placeholder/Task5.dll": {}
         }
       },
+      "Task6/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Utilities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Task6.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task6.dll": {}
+        }
+      },
       "Utilities/1.0.0": {
         "type": "project",
         "compile": {
@@ -5871,6 +5883,11 @@
       "path": "../Task5/Task5.csproj",
       "msbuildProject": "../Task5/Task5.csproj"
     },
+    "Task6/1.0.0": {
+      "type": "project",
+      "path": "../Task6/Task6.csproj",
+      "msbuildProject": "../Task6/Task6.csproj"
+    },
     "Utilities/1.0.0": {
       "type": "project",
       "path": "../Utilities/Utilities.csproj",
@@ -5885,7 +5902,8 @@
       "Microsoft.NETCore.App >= 2.1.0",
       "Task3 >= 1.0.0",
       "Task4 >= 1.0.0",
-      "Task5 >= 1.0.0"
+      "Task5 >= 1.0.0",
+      "Task6 >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5924,6 +5942,9 @@
             },
             "/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task5/Task5.csproj": {
               "projectPath": "/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task5/Task5.csproj"
+            },
+            "/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task6/Task6.csproj": {
+              "projectPath": "/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task6/Task6.csproj"
             }
           }
         }
