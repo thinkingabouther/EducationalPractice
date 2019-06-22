@@ -6,8 +6,23 @@ namespace Task7
     {
         public static void Main(string[] args)
         {
-            HammingCode code = new HammingCode("100110000110001011101");
-            Console.WriteLine("100110000110001011101");
+            bool flag;
+            string message;
+            do
+            {
+                Console.WriteLine("Input your message");
+                message = Console.ReadLine();
+                if (!HammingCode.IsHammingCode(message))
+                {
+                    Console.WriteLine("Hamming code should contain only 0 and 1. Try again");
+                    flag = false;
+                }
+                else
+                {
+                    flag = true;
+                }
+            } while (!flag);
+            HammingCode code = new HammingCode(message); // Example of hamming code is 100110000110001011101
             var error = code.ProcessHammingCode();
             if (error > 0)
             {

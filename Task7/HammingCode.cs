@@ -74,6 +74,16 @@ namespace Task7
             throw new NotProcessedHammingCodeException();
         }
 
+        public static bool IsHammingCode(string message)
+        {
+            for (int i = 0; i < message.Length; i++)
+            {
+                if (message[i] != '1' & message[i] != '0') return false;
+            }
+
+            return true;
+        }
+
         public class NotProcessedHammingCodeException : Exception
         {
             public NotProcessedHammingCodeException() : base("Code was not processed")
