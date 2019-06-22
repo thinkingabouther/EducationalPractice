@@ -26,7 +26,7 @@ namespace Task9
                 return curMember.Index;
             }
 
-            if (curMember.NextMember != null)
+            if (curMember.NextMember != Head)
             {
                 return FindByValue(value, curMember.NextMember);
             }
@@ -37,6 +37,12 @@ namespace Task9
         {
             if (Head.Value == value)
             {
+                if (Length == 1)
+                {
+                    Head = null;
+                    Length = 0;
+                    return;
+                }
                 Head = Head.NextMember;
                 Length--;
             }
@@ -48,13 +54,13 @@ namespace Task9
 
         public void DeleteByValue(int value, ListMember curMember, ListMember prevMember)
         {
-            if (curMember.NextMember == null)
+            if (curMember.NextMember == Head)
             {
                 if (curMember.Value != value) throw new ValueNotFoundException(value);
                 else
                 {
-                    curMember = null;
                     prevMember.NextMember = Head;
+                    Length--;
                 }
             }
             else
@@ -62,6 +68,7 @@ namespace Task9
                 if (curMember.Value == value)
                 {
                     prevMember.NextMember = curMember.NextMember;
+                    Length--;
                 }
                 else
                 {
@@ -139,6 +146,10 @@ namespace Task9
 
         public string GetAllMembers()
         {
+            if (Length == 0)
+            {
+                return "The list is empty";
+            }
             string output = "";
             var curElem = Head;
             while (curElem.NextMember != null)
