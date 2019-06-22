@@ -54,6 +54,7 @@
           <e p="encodedMessage.txt" t="Include" />
           <e p="keyMatrix.txt" t="Include" />
           <e p="messageToEncode.txt" t="Include" />
+          <e p="newKeyMatrix.txt" t="Include" />
         </e>
       </e>
       <e p="Task12" t="IncludeRecursive">
@@ -73,6 +74,16 @@
           <e p="Settings.settings" t="Include" />
         </e>
         <e p="Task12.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Task12_tests" t="IncludeRecursive">
+        <e p="ArrayWithLineValues.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MainClass.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Task12_tests.csproj" t="IncludeRecursive" />
       </e>
       <e p="Task2" t="IncludeRecursive">
         <e p="app.config" t="Include" />
