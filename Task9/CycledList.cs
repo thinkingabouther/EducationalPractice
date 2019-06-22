@@ -6,31 +6,68 @@ namespace Task9
     public class CycledList
     {
         public ListMember Head { get; set; }
-        public int Length { get; }
-        
+        public int Length { get; set; }
+
         public CycledList(int length)
         {
             Length = length;
             CreateList(1);
         }
 
-        public int FindByIndex(int index)
+        public int FindByValue(int value)
         {
-            return FindByIndex(index, Head);
+            return FindByValue(value, Head);
         }
         
-        public int FindByIndex(int index, ListMember curMember)
+        public int FindByValue(int value, ListMember curMember)
         {
-            if (curMember.Index == index)
+            if (curMember.Value == value)
             {
-                return curMember.Value;
+                return curMember.Index;
             }
 
             if (curMember.NextMember != null)
             {
-                return FindByIndex(index, curMember.NextMember);
+                return FindByValue(value, curMember.NextMember);
             }
-            throw new IndexNotFoundException(index);
+            throw new ValueNotFoundException(value);
+        }
+
+        public void DeleteByValue(int value)
+        {
+            if (Head.Value == value)
+            {
+                Head = Head.NextMember;
+                Length--;
+            }
+            else
+            {
+                DeleteByValue(value, Head.NextMember, Head);
+            }
+        }
+
+        public void DeleteByValue(int value, ListMember curMember, ListMember prevMember)
+        {
+            if (curMember.NextMember == null)
+            {
+                if (curMember.Value != value) throw new ValueNotFoundException(value);
+                else
+                {
+                    curMember = null;
+                    prevMember.NextMember = Head;
+                }
+            }
+            else
+            {
+                if (curMember.Value == value)
+                {
+                    prevMember.NextMember = curMember.NextMember;
+                }
+                else
+                {
+                    DeleteByValue(value, curMember.NextMember, curMember);
+                }
+            }
         }
 
         public void CreateList(int count)
@@ -136,14 +173,14 @@ namespace Task9
         }
     }
 
-    public class IndexNotFoundException : Exception
+    public class ValueNotFoundException : Exception
     {
-        private static string ModifyExceptionMessage(int index)
+        private static string ModifyExceptionMessage(int value)
         {
-            return $"{index} was not found in the list";
+            return $"{value} was not found in the list";
         }
 
-        public IndexNotFoundException(int index) : base(ModifyExceptionMessage(index))
+        public ValueNotFoundException(int index) : base(ModifyExceptionMessage(index))
         {
             
         }
