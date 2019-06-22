@@ -27,3 +27,5 @@
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/bin/Debug/netcoreapp2.1/Task6.exe
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/bin/Debug/netcoreapp2.1/Task6.pdb
 /Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/bin/Debug/netcoreapp2.1/Task6.exe.config
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/bin/Debug/netcoreapp2.1/Task7.exe
+/Users/arsenyneustroev/RiderProjects/EducationalPractice/Tests/bin/Debug/netcoreapp2.1/Task7.pdb

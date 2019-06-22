@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Task7
 {
+    [ExcludeFromCodeCoverage]
     internal class MainProgram
     {
         public static void Main(string[] args)

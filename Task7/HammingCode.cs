@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Task7
 {
@@ -29,43 +30,52 @@ namespace Task7
 
         public int ProcessHammingCode() // returning true if there is no error
         {
-            int sumOfPositions = 0;
-            int numOfControlBits = 0;
-            while ((int) Math.Pow(2, numOfControlBits) < CurrWord.Length + numOfControlBits - 1)
+            try
             {
-                numOfControlBits++;
-            }
+                int sumOfPositions = 0;
+                int numOfControlBits = 0;
+                while ((int) Math.Pow(2, numOfControlBits) < CurrWord.Length + numOfControlBits - 1)
+                {
+                    numOfControlBits++;
+                }
 
-            for (int i = 0; i < numOfControlBits; i++)
-            {
-                int indexOfContolBit = (int) Math.Pow(2, i) - 1;
-                int controlSum = GetSummByControlBitIndex(i);
+                for (int i = 0; i < numOfControlBits; i++)
+                {
+                    int indexOfContolBit = (int) Math.Pow(2, i) - 1;
+                    int controlSum = GetSummByControlBitIndex(i);
 //                Console.WriteLine($"Working with control bit - {i}");
 //                Console.WriteLine($"Сontrol summ - {controlSum}");
 //                Console.WriteLine($"index of control bit - {indexOfContolBit}");
 //                Console.WriteLine($"Control bit - {int.Parse(CurrWord[indexOfContolBit].ToString())}");
 //                Console.WriteLine();
-                if (controlSum % 2 != int.Parse(CurrWord[indexOfContolBit].ToString()))
-                {
-                    sumOfPositions += indexOfContolBit + 1;
+                    if (controlSum % 2 != int.Parse(CurrWord[indexOfContolBit].ToString()))
+                    {
+                        sumOfPositions += indexOfContolBit + 1;
+                    }
                 }
-            }
 
-            if (sumOfPositions != 0)
+                if (sumOfPositions != 0)
+                {
+                    if (CurrWord[sumOfPositions - 1] == '0')
+                    {
+                        CurrWord[sumOfPositions - 1] = '1';
+                    }
+                    else
+                    {
+                        CurrWord[sumOfPositions - 1] = '0';
+                    }
+                }
+
+                _isProcessed = true;
+                return sumOfPositions;
+            }
+            catch (IndexOutOfRangeException)
             {
-                if (CurrWord[sumOfPositions - 1] == '0')
-                {
-                    CurrWord[sumOfPositions - 1] = '1';
-                }
-                else
-                {
-                    CurrWord[sumOfPositions - 1] = '0';
-                }
+                throw new ProcessingException();
             }
-
-            _isProcessed = true;
-            return sumOfPositions;
         }
+        
+        [ExcludeFromCodeCoverage]
 
         public override string ToString()
         {
@@ -83,10 +93,18 @@ namespace Task7
 
             return true;
         }
-
+        [ExcludeFromCodeCoverage]
         public class NotProcessedHammingCodeException : Exception
         {
             public NotProcessedHammingCodeException() : base("Code was not processed")
+            {
+                
+            }
+        }
+        [ExcludeFromCodeCoverage]
+        public class ProcessingException : Exception
+        {
+            public ProcessingException() : base("Error while processing the code")
             {
                 
             }
