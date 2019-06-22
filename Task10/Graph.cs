@@ -7,6 +7,7 @@ namespace Task10
         public CustomList<Node> Nodes = new CustomList<Node>();
         public CustomList<Branch> Branches = new CustomList<Branch>();
 
+
         public void AddNode(Node node)
         {
             Nodes.Add(node);
@@ -19,13 +20,20 @@ namespace Task10
             {
                 Branches.Add(new Branch(node1, node2));
             }
-            else throw new Exception();
+            else throw new BranchAlreadyAddedException();
             ProcessIncedentNodes();
         }
-
-        public void DeleteNodesWithValue(string value)
+        
+        public void AddBranch(int i1, int i2)
+        {
+            AddBranch(Nodes[i1], Nodes[i2]);
+        }
+        
+        
+        public void DeleteNodesWithValue(int value)
         {
             var tempNodes = new CustomList<Node>();
+            var NodesToDelete = new CustomList<Node>();
             for (int i = 0; i < Nodes.Length; i++)
             {
                 if (Nodes[i].Value != value)
@@ -34,10 +42,28 @@ namespace Task10
                     tempNode.NextMember = null;
                     tempNodes.Add(tempNode);
                 }
-
+                else
+                {
+                    NodesToDelete.Add(Nodes[i]);
+                }
+            }
+            Nodes = tempNodes;
+            var tempBranches = new CustomList<Branch>();
+            foreach (Branch branch in Branches)
+            {
+                if (!NodesToDelete.Contains(branch.Node1) || NodesToDelete.Contains(branch.Node2))
+                {
+                    tempBranches.Add(branch);
+                }
             }
 
-            Nodes = tempNodes;
+            Branches = tempBranches;
+            foreach (Node node in Nodes)
+            {
+                node.IncedentNodes = new CustomList<Node>();
+            }
+
+            ProcessIncedentNodes();
 
         }
 
@@ -52,18 +78,7 @@ namespace Task10
                 }
             }
         }
-
-        public static string GetCorreleation(Graph a, Graph b, int num)
-        {
-            string output = "";
-            var numString = num.ToString();
-            for (int i = 0; i < numString.Length; i++)
-            {
-                output += $"{a.Nodes[i].Name} - {b.Nodes[int.Parse(numString[i].ToString())-1].Name}\n";
-            }
-
-            return output;
-        }
+        
 
         public string GetAllNodes()
         {
@@ -92,11 +107,11 @@ namespace Task10
     public class Node : ICloneable, IMember<Node>
     {
         public string Name { get; }
-        public string Value { get; set; }
+        public int Value { get; set; }
         public CustomList<Node> IncedentNodes = new CustomList<Node>();
         private Node _nextMember;
 
-        public Node(string name, string value)
+        public Node(string name, int value)
         {
             Name = name;
             Value = value;
@@ -105,7 +120,7 @@ namespace Task10
         public Node(string name)
         {
             Name = name;
-            Value = "";
+            Value = 0;
         }
 
         public void AddIncedentNode(Node node)
@@ -175,5 +190,11 @@ namespace Task10
             get => _nextMember;
             set => _nextMember = value;
         }
+        
+        
+    }
+    public class BranchAlreadyAddedException : Exception
+    {
+        
     }
 }
