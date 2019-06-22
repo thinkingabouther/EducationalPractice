@@ -1675,6 +1675,18 @@
           "bin/placeholder/Task7.dll": {}
         }
       },
+      "Task8/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Utilities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Task8.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task8.dll": {}
+        }
+      },
       "Utilities/1.0.0": {
         "type": "project",
         "compile": {
@@ -5902,6 +5914,11 @@
       "path": "../Task7/Task7.csproj",
       "msbuildProject": "../Task7/Task7.csproj"
     },
+    "Task8/1.0.0": {
+      "type": "project",
+      "path": "../Task8/Task8.csproj",
+      "msbuildProject": "../Task8/Task8.csproj"
+    },
     "Utilities/1.0.0": {
       "type": "project",
       "path": "../Utilities/Utilities.csproj",
@@ -5918,7 +5935,8 @@
       "Task4 >= 1.0.0",
       "Task5 >= 1.0.0",
       "Task6 >= 1.0.0",
-      "Task7 >= 1.0.0"
+      "Task7 >= 1.0.0",
+      "Task8 >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5963,6 +5981,9 @@
             },
             "/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task7/Task7.csproj": {
               "projectPath": "/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task7/Task7.csproj"
+            },
+            "/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task8/Task8.csproj": {
+              "projectPath": "/Users/arsenyneustroev/RiderProjects/EducationalPractice/Task8/Task8.csproj"
             }
           }
         }
