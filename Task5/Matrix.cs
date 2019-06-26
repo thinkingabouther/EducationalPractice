@@ -146,14 +146,6 @@ namespace Task5
         }
     }
     [ExcludeFromCodeCoverage]
-    public class WrongMatrixMemberInstance : Exception
-    {
-        public WrongMatrixMemberInstance(string message) : base(message)
-        {
-            
-        }
-    }
-    [ExcludeFromCodeCoverage]
     public class WrongMatrixSize : Exception
     {
         public WrongMatrixSize(int x) : base(ModifyExceptionMessage(x))

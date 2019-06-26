@@ -7,13 +7,13 @@ namespace Task12
     {
         public static void Main(string[] args)
         {
-            int[] lengths = {10, 100, 1000};
+            int[] lengths = {10, 50, 100, 200};
             foreach (int length in lengths)
             {
                 Console.WriteLine($"--------Working with {length} length of array--------");
                 int swapsCount;
                 int compCount;
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     if (i == 0) Console.WriteLine("Not sorted array:");
                     if (i == 1) Console.WriteLine("Sorted array:");

@@ -9,16 +9,26 @@ namespace Task4
     {
         public static void Main(string[] args)
         {
-            double eps = ConsoleInputParse.Double("Input the accuracy of calculations (epsilon)",
-                "Incorrect input, should be double");
-            InfiniteSequence infiniteSequence = new InfiniteSequence(eps);
-            double sum = 0;
-            foreach (ElementOfSequence elementOfSequence in infiniteSequence)
+            try
             {
-                sum += elementOfSequence;
-                Console.WriteLine(elementOfSequence.ToString());
+
+
+                double eps = ConsoleInputParse.Double("Input the accuracy of calculations (epsilon)",
+                    "Incorrect input, should be double");
+                InfiniteSequence infiniteSequence = new InfiniteSequence(eps);
+                double sum = 0;
+                foreach (ElementOfSequence elementOfSequence in infiniteSequence)
+                {
+                    sum += elementOfSequence;
+                    Console.WriteLine(elementOfSequence.ToString());
+                }
+
+                Console.WriteLine($"Sum of infinite sequence with accuracy {eps} is {sum}");
             }
-            Console.WriteLine($"Sum of infinite sequence with accuracy {eps} is {sum}");
+            catch (TooBigAccuracyException)
+            {
+                Console.WriteLine("The accuracy was too big. Try again");
+            }
         }
     }
 }

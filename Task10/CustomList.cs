@@ -140,20 +140,20 @@ namespace Task10
 
             public bool MoveNext()
             {
+                if (_curElem == null) return false;
                 if (!_firstElementEnumerated)
                 {
                     _firstElementEnumerated = true;
                     return true;
                 }
-
+                
                 try
                 {
                     if (_curElem.NextMember != null)
                     {
-                        _curElem = (T) _curElem.NextMember;
+                        _curElem = _curElem.NextMember;
                         return true;
                     }
-
                     return false;
                 }
                 catch (NullReferenceException)

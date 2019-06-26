@@ -11,26 +11,37 @@ namespace Task5
     {
         public static void Main(string[] args)
         {
-            bool flag;
-            int matrixSize;
-            do
+            try
             {
-                matrixSize =
-                    Utilities.ConsoleInputParse.Int("Input the size of matrix",
-                        "Wrong size of matrix, should be integer");
-                if (matrixSize < 0)
+                bool flag;
+                int matrixSize;
+                do
                 {
-                    flag = false;
-                    Console.WriteLine("Wrong size of matrix, should be positive");
-                }
-                else flag = true;
+                    matrixSize =
+                        Utilities.ConsoleInputParse.Int("Input the size of matrix",
+                            "Wrong size of matrix, should be integer");
+                    if (matrixSize < 0)
+                    {
+                        flag = false;
+                        Console.WriteLine("Wrong size of matrix, should be positive");
+                    }
+                    else flag = true;
 
-            } while (!flag);
-            
-            Matrix matrix = new Matrix(matrixSize, false);
-            Console.WriteLine();
-            matrix.ShowMatrix();
-            Console.WriteLine($"Max element of given matrix is {matrix.GetMaximumOfElements()}");
+                } while (!flag);
+
+                Matrix matrix = new Matrix(matrixSize, false);
+                Console.WriteLine();
+                matrix.ShowMatrix();
+                Console.WriteLine($"Max element of given matrix is {matrix.GetMaximumOfElements()}");
+            }
+            catch (WrongMatrixSize e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (WrongMatrixIndex e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

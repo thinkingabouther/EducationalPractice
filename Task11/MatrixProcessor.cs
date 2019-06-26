@@ -194,51 +194,71 @@ namespace Task11
         
         public static int[,] ReadIntMatrix(string filePath)
         {
-            int[,] matrix = new int[_matrixSize, _matrixSize];
-            using (StreamReader streamReader = new StreamReader(filePath))
+            try
             {
-                string currFile = streamReader.ReadToEnd();
-                string[] strings = currFile.Split('\n');
-                int i = 0;
-                foreach (string s in strings)
+                int[,] matrix = new int[_matrixSize, _matrixSize];
+                using (StreamReader streamReader = new StreamReader(filePath))
                 {
-                    var stringWithNums = s.Split(' ');
-                    for (int j = 0; j < _matrixSize; j++)
+                    string currFile = streamReader.ReadToEnd();
+                    string[] strings = currFile.Split('\n');
+                    int i = 0;
+                    foreach (string s in strings)
                     {
-                        matrix[i, j] = int.Parse(stringWithNums[j]);
+                        var stringWithNums = s.Split(' ');
+                        for (int j = 0; j < _matrixSize; j++)
+                        {
+                            matrix[i, j] = int.Parse(stringWithNums[j]);
+                        }
+
+                        i++;
                     }
-                    i++;
                 }
+
+                return matrix;
             }
-            return matrix;
+            catch (Exception)
+            {
+                throw new FileProcessingException();
+            } 
         }
         
         public static char[,] ReadCharMatrix(string filePath)
         {
-            char[,] matrix = new char[_matrixSize, _matrixSize];
-            using (StreamReader streamReader = new StreamReader(filePath))
+            try
             {
-                string currFile = streamReader.ReadToEnd();
-                string[] strings = currFile.Split('\n');
-                int i = 0;
-                foreach (string s in strings)
+                char[,] matrix = new char[_matrixSize, _matrixSize];
+                using (StreamReader streamReader = new StreamReader(filePath))
                 {
-                    var stringWithNums = s.Split(' ');
-                    for (int j = 0; j < _matrixSize; j++)
+                    string currFile = streamReader.ReadToEnd();
+                    string[] strings = currFile.Split('\n');
+                    int i = 0;
+                    foreach (string s in strings)
                     {
-                        matrix[i, j] = stringWithNums[j][0];
+                        var stringWithNums = s.Split(' ');
+                        for (int j = 0; j < _matrixSize; j++)
+                        {
+                            matrix[i, j] = stringWithNums[j][0];
+                        }
+
+                        i++;
                     }
-                    i++;
                 }
+
+                return matrix;
             }
-            return matrix;
+            catch (Exception)
+            {
+                throw new FileProcessingException();
+            }
         }
 
         public static string ReadMessage(string filePath)
         {
             using (StreamReader streamReader = new StreamReader(filePath))
             {
-                return streamReader.ReadToEnd();
+                var str = streamReader.ReadToEnd();
+                if (str.Length < 100) throw new MessageReadingException(str);
+                return str;
             }
         }
 
@@ -259,6 +279,24 @@ namespace Task11
                         streamWriter.WriteLine();
                 }
             }
+        }
+    }
+
+    public class FileProcessingException : Exception
+    {
+        
+    }
+    
+    public class MessageReadingException : Exception
+    {
+        public MessageReadingException(string message) : base(ModifyExceptionMessage(message))
+        {
+            
+        }
+
+        static string ModifyExceptionMessage(string message)
+        {
+            return $"message {message} is of wrong size";
         }
     }
 }

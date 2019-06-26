@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace Task10
 {
@@ -16,99 +17,57 @@ namespace Task10
         public void AddBranch(Node node1, Node node2)
         {
             var branch = new Branch(node1, node2);
-            if (!Branches.Contains(branch))
+            if (Branches.Length == 0)
             {
                 Branches.Add(new Branch(node1, node2));
             }
-            else throw new BranchAlreadyAddedException();
-            ProcessIncedentNodes();
+            else
+            {
+                if (!Branches.Contains(branch))
+                {
+                    Branches.Add(new Branch(node1, node2));
+                }
+                else throw new BranchAlreadyAddedException();
+            }
         }
         
         public void AddBranch(int i1, int i2)
         {
             AddBranch(Nodes[i1], Nodes[i2]);
         }
-        
-        
+
+
         public void DeleteNodesWithValue(int value)
         {
             var tempNodes = new CustomList<Node>();
-            var NodesToDelete = new CustomList<Node>();
             for (int i = 0; i < Nodes.Length; i++)
             {
                 if (Nodes[i].Value != value)
                 {
-                    Node tempNode = (Node)Nodes[i].Clone();
-                    tempNode.NextMember = null;
-                    tempNodes.Add(tempNode);
-                }
-                else
-                {
-                    NodesToDelete.Add(Nodes[i]);
+                    tempNodes.Add((Node) Nodes[i].Clone());
                 }
             }
+
             Nodes = tempNodes;
             var tempBranches = new CustomList<Branch>();
             foreach (Branch branch in Branches)
             {
-                if (!NodesToDelete.Contains(branch.Node1) || NodesToDelete.Contains(branch.Node2))
+                if (Nodes.Contains(branch.Node1) & Nodes.Contains(branch.Node2))
                 {
-                    tempBranches.Add(branch);
+                    tempBranches.Add((Branch) branch.Clone());
                 }
             }
 
             Branches = tempBranches;
-            foreach (Node node in Nodes)
-            {
-                node.IncedentNodes = new CustomList<Node>();
-            }
-
-            ProcessIncedentNodes();
 
         }
 
-        public void ProcessIncedentNodes()
-        {
-            foreach (Node node in Nodes)
-            {
-                foreach (Branch branch in Branches)
-                {
-                    if (branch.Node1 == node && !node.IncedentNodes.Contains(branch.Node2)) node.AddIncedentNode(branch.Node2);
-                    if (branch.Node2 == node && !node.IncedentNodes.Contains(branch.Node1)) node.AddIncedentNode(branch.Node1);
-                }
-            }
-        }
-        
-
-        public string GetAllNodes()
-        {
-            string output = "";
-            foreach (Node node in Nodes)
-            {
-                output += $"node {node.Name} with value {node.Value}\n";
-            }
-
-            return output;
-        }
-        
-        public string GetAllBranches()
-        {
-            string output = "";
-            foreach (Branch branch in Branches)
-            {
-                output += branch + "\n";
-            }
-
-            return output;
-        }
-        
     }
 
     public class Node : ICloneable, IMember<Node>
     {
         public string Name { get; }
         public int Value { get; set; }
-        public CustomList<Node> IncedentNodes = new CustomList<Node>();
         private Node _nextMember;
 
         public Node(string name, int value)
@@ -122,23 +81,6 @@ namespace Task10
             Name = name;
             Value = 0;
         }
-
-        public void AddIncedentNode(Node node)
-        {
-            IncedentNodes.Add(node);
-        }
-        
-        public string GetAllIncedentNodesNames()
-        {
-            string output = "";
-            foreach (Node incedentNode in IncedentNodes)
-            {
-                output += incedentNode.Name + ", ";
-            }
-
-            return output;
-        }
-
         
 
         public override string ToString()
@@ -147,21 +89,25 @@ namespace Task10
 
         public object Clone()
         {
-            var tempNode = new Node($"{Name}");
-            tempNode.Value = Value;
-            tempNode.NextMember = NextMember;
-            return tempNode;
+            return new Node(Name, Value);
         }
+
 
         public Node NextMember
         {
             get => _nextMember;
             set => _nextMember = value;
         }
+
+        public override bool Equals(object obj)
+        {
+            var temp = (Node) obj;
+            return temp != null && temp.Name == this.Name;
+        }
     }
     
 
-    public class Branch : IMember<Branch>
+    public class Branch : ICloneable, IMember<Branch>
     {
         private Branch _nextMember;
         public Node Node1 { get; }
@@ -176,6 +122,11 @@ namespace Task10
         public override string ToString()
         {
             return $"Branch between {Node1} and {Node2}";
+        }
+
+        public object Clone()
+        {
+            return new Branch(Node1, Node2);
         }
 
         public override bool Equals(object obj)
